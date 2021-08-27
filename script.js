@@ -54,16 +54,17 @@ setInterval(() => {
         }, 1000);
     }
     else if (offsetX < 145 && cross) {
-        score += 1;
         if (c==1) {
             scoreCont.innerHTML = "Your Score: " + score
         } else {
             setTimeout(() => {
+        score += 100;
+
                 aniDur = parseFloat(window.getComputedStyle(gabbar, null).getPropertyValue('animation-duration'));
                 newDur = aniDur - 0.1;
                 gabbar.style.animationDuration = newDur + 's';
             }, 500);
-    
+            // console.log("edfv")
             updateScore(score);
             
         }
