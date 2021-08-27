@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+    font-weight: bold;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.Basanti{
+    background-image: url(basanti.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 130px;
+    height: 114px;
+    /* border: 2px solid black; */
+    position: absolute;
+    bottom: 12px;
+    left: 52px;
+}
+
+.gabbar{
+    width: 131px;
+    height: 113px;
+    background-image: url(gabber.gif);
+    background-size: cover;
+    /* border: 2px solid black; */
+    position: absolute;
+    bottom: 13px;
+    left: 44vw;
+    transform: scaleX(-1);
+}
+
+.animateBasanti{
+    animation: bsanti 0.6s linear;
+}
+
+.gabbarAni{
+    animation: gabbar 5s linear infinite;
+}
+
+.death{
+    animation: death 5s  1;
+    animation-fill-mode: forwards;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes bsanti{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes gabbar{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes death{
+    0%{
+        bottom: 200px;
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+        bottom: 0;
+    }
+    100%{
+        transform: rotate(-90deg);
+        bottom: -200px; 
+    }
+}
